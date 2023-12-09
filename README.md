@@ -1,2 +1,2 @@
-# sm-plugin-ZSI-Command-
+# sm-plugin-ZSI-Command
 Sourcemod plugin for ZSI Server
