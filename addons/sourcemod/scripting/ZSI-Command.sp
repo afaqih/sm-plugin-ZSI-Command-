@@ -1,4 +1,4 @@
-//updated 9/12/2023 @ 8:27 PM
+//updated 29/11/2024 @ 3:28 PM
 #include <sourcemod>
 #include <sdktools>
 #include <multicolors> 
@@ -14,7 +14,7 @@ public Plugin myinfo =
     name = "ZSI Command",
     author = "ArmadiLo, Dimas9410",
     description = "Trigger to print link to the user chat",
-    version = "1.1",
+    version = "1.4",
     url = "github.com/afaqih"
 };
 
@@ -41,10 +41,10 @@ public Action Command_Discord(int client, int args)
 
 	if (g_fSeconds[client] + GetConVarFloat(gcV_DiscordCountdownTime) > GetGameTime())
 	{
-		CPrintToChat(client, "{lightgreen}You need to wait {green}%.1f {lightgreen}more time to use this command.", ((g_fSeconds[client] + RoundFloat(GetConVarFloat(gcV_DiscordCountdownTime))) - RoundFloat(GetGameTime())));
+		CPrintToChat(client, "{blue}[{aqua}ZSI{blue}] {lightgreen}You need to wait {green}%.1f {lightgreen}more time to use this command.", ((g_fSeconds[client] + RoundFloat(GetConVarFloat(gcV_DiscordCountdownTime))) - RoundFloat(GetGameTime())));
 	}
 	else {
-		CPrintToChat(client, "{blue}[{aqua}ZSI{blue}] {green}Discord {lightgreen}Group : {white}https://discord.gg/dXNQs65dqd");
+		CPrintToChat(client, "{blue}[{aqua}ZSI{blue}] {green}Discord {lightgreen}Group : {white}https://discord.com/invite/dXNQs65dqd");
 	}
 
 	g_fSeconds[client] = GetGameTime();
@@ -55,10 +55,10 @@ public Action Command_Discord(int client, int args)
 public Action Command_Steam(int client, int args)
 {	
 	if (g_fSeconds[client] + GetConVarFloat(gcV_SteamCountdownTime) > GetGameTime()) {
-		CPrintToChat(client, "{lightgreen}You need to wait {green}%.1f {lightgreen}more time to use this command.", ((g_fSeconds[client] + RoundFloat(GetConVarFloat(gcV_SteamCountdownTime))) - RoundFloat(GetGameTime())));
+		CPrintToChat(client, "{blue}[{aqua}ZSI{blue}] {lightgreen}You need to wait {green}%.1f {lightgreen}more time to use this command.", ((g_fSeconds[client] + RoundFloat(GetConVarFloat(gcV_SteamCountdownTime))) - RoundFloat(GetGameTime())));
 	}
 	else {
-		CPrintToChat(client, "{blue}[{aqua}ZSI{blue}] {green}Steam {lightgreen}Group : {white}https://steamcommunity.com/groups/offlinersv");
+		CPrintToChat(client, "{blue}[{aqua}ZSI{blue}] {green}Steam {lightgreen}Group : {white}https://steamcommunity.com/groups/zombieescapeserverindonesia");
 	}
 	
 	g_fSeconds[client] = GetGameTime();
